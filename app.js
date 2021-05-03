@@ -35,6 +35,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/uploads', express.static('uploads'));
 
 const mongoBDProd = process.env.MONGO_DB_URI
+console.log('env', process.env)
+console.log('mongoBDProd', mongoBDProd)
 
 mongoose.connect(mongoBDProd || 'mongodb://localhost:27017/psy', {
   useNewUrlParser: true,
