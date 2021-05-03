@@ -38,7 +38,7 @@ const mongoBDProd = process.env.MONGO_DB_URI
 console.log('env', process.env)
 console.log('mongoBDProd', mongoBDProd)
 
-mongoose.connect(mongoBDProd, {
+mongoose.connect('mongodb+srv://sasha:111089nn@cluster0.qhe4g.mongodb.net/free-psy', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
