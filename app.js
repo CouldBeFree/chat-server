@@ -34,7 +34,9 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use('/uploads', express.static('uploads'));
 
-mongoose.connect('mongodb://localhost:27017/psy', {
+const mongoBDProd = process.env.MONGO_DB_URI
+
+mongoose.connect(mongoBDProd || 'mongodb://localhost:27017/psy', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
