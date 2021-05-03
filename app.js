@@ -56,7 +56,7 @@ const users = require('./routes/users');
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/users', users);
 
-const port = 5050;
+const port = process.env.PORT || 5050;
 const server = app.listen(port, () => {
   console.log(`Server is listening on port ${port}`)
 });
