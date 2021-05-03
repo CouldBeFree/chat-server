@@ -66,7 +66,7 @@ const server = app.listen(port, () => {
 // Socket setup
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:8080',
+    origin: 'https://free-psy.herokuapp.com',
     methods: ['GET', 'POST']
   }
 });
