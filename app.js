@@ -36,7 +36,7 @@ app.use('/uploads', express.static('uploads'));
 
 const mongoBDProd = process.env.MONGO_DB_URI
 
-mongoose.connect('mongodb+srv://sasha:111089nn@cluster0.qhe4g.mongodb.net/free-psy', {
+mongoose.connect(mongoBDProd || 'mongodb://localhost:27017/psy', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
