@@ -17,14 +17,12 @@ app.all('*', multerSettings);
 app.use(express.json());
 
 // Enable CORS
-/*
 app.use(cors({
   credentials: true,
-  origin: '*'
+  origin: 'http://localhost:8080'
 }));
-*/
 
-app.use(cors())
+// app.use(cors())
 
 //Cookie parser
 app.use(cookieParser());
