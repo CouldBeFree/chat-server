@@ -19,7 +19,7 @@ app.use(express.json());
 // Enable CORS
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:8080'
+  origin: 'https://free-psy.herokuapp.com'
 }));
 
 // app.use(cors())
