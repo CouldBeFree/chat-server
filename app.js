@@ -19,7 +19,7 @@ app.use(express.json());
 // Enable CORS
 app.use(cors({
   credentials: true,
-  origin: 'http://psy-free.herokuapp.com'
+  origin: 'https://psy-free.herokuapp.com'
 }));
 
 //Cookie parser
@@ -64,7 +64,7 @@ const server = app.listen(port, () => {
 // Socket setup
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://psy-free.herokuapp.com',
+    origin: 'https://psy-free.herokuapp.com',
     methods: ['GET', 'POST']
   }
 });
