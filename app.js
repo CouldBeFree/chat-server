@@ -16,12 +16,10 @@ app.all('*', multerSettings);
 //Body parser
 app.use(express.json());
 
-const isProductionMode = !!process.env.PORT
-
 // Enable CORS
 app.use(cors({
   credentials: true,
-  origin: isProductionMode ? 'https://psy-free.herokuapp.com' : 'http://localhost:3000'
+  origin: 'https://psy-free.herokuapp.com'
 }));
 
 //Cookie parser
@@ -66,7 +64,7 @@ const server = app.listen(port, () => {
 // Socket setup
 const io = require('socket.io')(server, {
   cors: {
-    origin: isProductionMode ? 'https://psy-free.herokuapp.com' : 'http://localhost:3000',
+    origin: 'https://psy-free.herokuapp.com',
     methods: ['GET', 'POST']
   }
 });
