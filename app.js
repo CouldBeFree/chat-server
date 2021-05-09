@@ -51,10 +51,12 @@ db.once('open', () => {
 // Routes
 const auth = require('./routes/auth');
 const users = require('./routes/users');
+const common = require('./routes/common');
 
 //Mount routes
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/users', users);
+app.use('/api/v1', common);
 
 const port = process.env.PORT || 5050;
 const server = app.listen(port, () => {
